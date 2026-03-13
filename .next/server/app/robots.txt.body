@@ -1,0 +1,10 @@
+User-Agent: *
+Allow: /
+Allow: /login
+Allow: /register
+Allow: /dashboard
+Disallow: /api/
+Disallow: /verify
+Disallow: /settings
+
+Sitemap: https://go.auva.dev/sitemap.xml
