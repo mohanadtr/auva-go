@@ -6,17 +6,6 @@ import { useAuth } from "@/components/auth-provider";
 
 const navApps = [
   {
-    name: "Home",
-    href: "https://auva.dev",
-    gradient: "from-indigo-500 to-indigo-600",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="white" className="h-5 w-5">
-        <rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2"/>
-        <rect x="3" y="13" width="8" height="8" rx="2"/><rect x="13" y="13" width="8" height="8" rx="2"/>
-      </svg>
-    ),
-  },
-  {
     name: "Go",
     href: "/",
     gradient: "from-blue-500 to-blue-600",
@@ -46,29 +35,6 @@ const navApps = [
       <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
         <path d="M12 20h9" />
         <path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z" />
-      </svg>
-    ),
-  },
-  {
-    name: "Bin",
-    href: "https://bin.auva.dev",
-    gradient: "from-rose-500 to-rose-600",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
-        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-        <polyline points="17 8 12 3 7 8" />
-        <line x1="12" y1="3" x2="12" y2="15" />
-      </svg>
-    ),
-  },
-  {
-    name: "Form",
-    href: "https://form.auva.dev",
-    gradient: "from-violet-500 to-violet-600",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
-        <path d="M9 11l3 3L22 4" />
-        <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
       </svg>
     ),
   },

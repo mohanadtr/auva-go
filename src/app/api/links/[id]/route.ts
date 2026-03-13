@@ -119,7 +119,7 @@ export async function PATCH(
     }
 }
 
-/* ── DELETE /api/links/[id] – Soft-delete (disable) ───────────────────── */
+/* ── DELETE /api/links/[id] – Hard delete ─────────────────────────────── */
 
 export async function DELETE(
     _req: NextRequest,
@@ -131,15 +131,14 @@ export async function DELETE(
 
         await connectDB();
 
-        const link = await Link.findOneAndUpdate(
-            { _id: params.id, userId: user.userId },
-            { isActive: false },
-            { new: true }
-        );
+        const link = await Link.findOneAndDelete({
+            _id: params.id,
+            userId: user.userId,
+        });
 
         if (!link) return jsonError("Link not found", 404);
 
-        return jsonOk({ message: "Link disabled", id: link._id });
+        return jsonOk({ message: "Link deleted", id: link._id });
     } catch (err: any) {
         console.error("Delete link error:", err);
         return jsonError("Internal server error", 500);

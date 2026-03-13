@@ -86,8 +86,8 @@ export function DashboardContent() {
         try {
             const res = await fetch(`/api/links/${id}`, { method: "DELETE" });
             if (res.ok) {
-                setLinks((prev) => prev.map((l) => (l.id === id ? { ...l, isActive: false } : l)));
-                toast.success("Link disabled");
+                setLinks((prev) => prev.filter((l) => l.id !== id));
+                toast.success("Link deleted");
             }
         } catch {
             toast.error("Failed to delete link");
